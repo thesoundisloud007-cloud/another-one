@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raghul Nandhakumar | Creative Scrapbook Portfolio</title>
+  <meta name="description" content="Portfolio of Raghul Nandhakumar, B.Tech Artificial Intelligence Student, UI/UX Designer, and Python Developer. Designed as a creative interactive editorial scrapbook.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+            outfit: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              charcoal: '#1e293b',
+              redhead: '#fca5a5',
+              bluey: '#3b82f6',
+              purpley: '#a855f7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="paper-cream relative selection:bg-rose-200 selection:text-rose-900">
+
+  <!-- ================= LOADING SCREEN ================= -->
+  <div id="loading-screen" class="fixed inset-0 z-50 bg-[#1e293b] flex flex-col justify-center items-center text-white transition-overlay">
+    <!-- Paper unfold loader graphic -->
+    <div class="relative w-24 h-24 mb-6 flex justify-center items-center">
+      <div class="absolute inset-0 border-2 border-dashed border-gray-400 rounded-lg animate-[spin_8s_linear_infinite]"></div>
+      <div class="w-16 h-16 bg-[#faf6f0] text-[#1e293b] flex items-center justify-center font-hand text-3xl font-bold shadow-lg transform -rotate-12 transition-transform hover:scale-110">
+        R
+      </div>
+      <div class="w-16 h-16 bg-rose-400 absolute top-4 left-6 text-white flex items-center justify-center font-hand text-3xl font-bold shadow-lg transform rotate-12">
+        N
+      </div>
+    </div>
+    <h1 class="font-outfit text-2xl font-bold tracking-widest uppercase mb-1">Raghul Nandhakumar</h1>
+    <p class="font-serif italic text-rose-300 text-sm tracking-wider mb-6">Creative Scrapbook Portfolio</p>
+    <div class="flex items-center gap-2">
+      <span class="font-mono text-xs opacity-60">Flipping pages...</span>
+      <div class="w-12 h-1 bg-gray-700 rounded overflow-hidden">
+        <div class="h-full bg-rose-400 w-1/2 animate-[pulse_1s_infinite]"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notebook Binder Ring overlay (rendered down the left page boundary for scrapbook feel on wider displays) -->
+  <div class="hidden lg:block fixed left-4 top-0 bottom-0 w-8 z-30 pointer-events-none flex flex-col justify-around py-12">
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+    <div class="w-8 h-12 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-500 rounded-r-xl shadow-md border-y border-r border-gray-400 transform -rotate-3 my-2"></div>
+  </div>
+
+  <!-- Floating stickers around the page -->
+  <div class="hidden md:block fixed right-6 top-24 z-20 animate-float pointer-events-none opacity-80 select-none">
+    <div class="bg-rose-100 text-rose-600 border border-rose-300 px-3 py-1 font-hand text-lg rounded-full shadow-md transform rotate-12 flex items-center gap-1">
+      ✨ Creative!
+    </div>
+  </div>
+  <div class="hidden md:block fixed left-16 bottom-32 z-20 animate-float-slow pointer-events-none opacity-80 select-none">
+    <div class="bg-yellow-100 text-yellow-700 border border-yellow-300 p-2 font-hand text-lg rounded-md shadow-md transform -rotate-12 flex items-center justify-center">
+      🎨 design &amp; code
+    </div>
+  </div>
+
+  <!-- Header / Navigation (Scrapbook style tape notes) -->
+  <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center z-40 relative">
+    <div class="font-outfit text-xl font-extrabold tracking-wider bg-white px-4 py-1 shadow-sm border border-gray-200 transform -rotate-1">
+      RAGHUL.N <span class="text-rose-500 text-xs font-hand font-normal ml-1">AI &amp; Design</span>
+    </div>
+    
+    <nav class="hidden md:flex gap-4 items-center">
+      <a href="#about" class="bg-yellow-50 hover:bg-yellow-100 px-3 py-1 shadow-sm border border-yellow-200 rounded transform -rotate-2 text-sm font-hand text-gray-800 transition-transform hover:scale-105">About</a>
+      <a href="#education" class="bg-blue-50 hover:bg-blue-100 px-3 py-1 shadow-sm border border-blue-200 rounded transform rotate-1 text-sm font-hand text-gray-800 transition-transform hover:scale-105">Education</a>
+      <a href="#skills" class="bg-green-50 hover:bg-green-100 px-3 py-1 shadow-sm border border-green-200 rounded transform -rotate-1 text-sm font-hand text-gray-800 transition-transform hover:scale-105">Skills</a>
+      <a href="#experience" class="bg-pink-50 hover:bg-pink-100 px-3 py-1 shadow-sm border border-pink-200 rounded transform rotate-3 text-sm font-hand text-gray-800 transition-transform hover:scale-105">Experience</a>
+      <a href="#projects" class="bg-purple-50 hover:bg-purple-100 px-3 py-1 shadow-sm border border-purple-200 rounded transform -rotate-3 text-sm font-hand text-gray-800 transition-transform hover:scale-105">Projects</a>
+      <a href="#contact" class="bg-red-400 hover:bg-red-500 text-white px-4 py-1.5 shadow-md rounded transform -rotate-1 text-sm font-hand transition-transform hover:scale-105">Let's Connect</a>
+    </nav>
+  </header>
+
+  <!-- ================= SECTION 1: HOME ================= -->
+  <section id="home" class="min-h-screen flex flex-col justify-center relative py-12 px-6 md:px-16 lg:px-24 overflow-hidden paper-grid">
+    
+    <!-- Decorative pushpin and washi tape -->
+    <div class="absolute top-12 left-1/4 washi-tape washi-tape-pink w-28 transform -rotate-6 hidden md:block"></div>
+    <div class="absolute top-36 right-1/3 washi-tape washi-tape-blue w-24 transform rotate-12 hidden md:block"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 max-w-7xl mx-auto w-full">
+      
+      <!-- Left Column: Polaroid Frame -->
+      <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+        <div class="relative">
+          <!-- Washi tape pinning the polaroid -->
+          <div class="washi-tape washi-tape-blue w-32 -top-6 left-1/2 transform -translate-x-1/2 -rotate-6 z-20"></div>
+          
+          <div class="relative transform -rotate-3 hover:rotate-1 transition-all duration-300 max-w-[280px] md:max-w-[360px] shadow-2xl rounded-lg overflow-hidden border border-slate-700/10">
+            <img src="portrait.jpg" alt="Raghul Nandhakumar" class="w-full h-auto object-cover">
+            <!-- Glow overlays -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/10 to-purple-500/15 mix-blend-screen pointer-events-none"></div>
+          </div>
+          
+          <!-- Cute small star sticker at the bottom left -->
+          <div class="absolute -bottom-4 -left-4 z-20 animate-bounce">
+            <svg class="w-8 h-8 text-yellow-400 drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.133 9.21l8.2-1.192z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column: Info & Details -->
+      <div class="lg:col-span-7 flex flex-col justify-center order-1 lg:order-2">
+        <div class="bg-white/80 backdrop-blur-sm p-6 md:p-8 border border-gray-200 shadow-xl rounded-xl relative transform rotate-1">
+          <!-- Notebook bindings look -->
+          <div class="paper-clip"></div>
+          
+          <p class="font-hand text-2xl text-rose-500 font-bold mb-1">Hi, I'm</p>
+          <h2 class="font-outfit text-4xl md:text-6xl font-extrabold tracking-tight text-slate-800 mb-2">
+            Raghul Nandhakumar
+          </h2>
+          
+          <div class="h-8 md:h-10 flex items-center mb-6">
+            <span class="font-serif italic text-lg md:text-xl text-slate-500 font-semibold typing-cursor text-rose-600" id="typing-text">Designing Experiences</span>
+          </div>
+          
+          <p class="text-slate-600 font-normal leading-relaxed text-sm md:text-base mb-8 max-w-xl">
+            I enjoy creating digital experiences that are simple, intuitive, and meaningful. Whether I'm designing user interfaces, solving problems with Python, or exploring Artificial Intelligence, I'm always excited to learn, create, and build something impactful.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="relative group inline-flex items-center justify-center bg-slate-800 text-white px-6 py-3 font-semibold text-sm rounded shadow-lg overflow-hidden transition-all duration-300 hover:bg-slate-700 hover:scale-105 active:scale-95">
+              <span>View Projects</span>
+              <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </a>
+            
+            <a href="#contact" class="inline-flex items-center justify-center border-2 border-dashed border-slate-700 bg-white/50 text-slate-700 hover:bg-white hover:text-rose-500 px-6 py-3 font-semibold text-sm rounded transition-all duration-300 hover:scale-105 active:scale-95">
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,0 L24,18 C48,36,96,72,144,80 C192,88,240,68,288,52 C336,36,384,24,432,36 C480,48,528,84,576,80 C624,76,672,32,720,24 C768,16,816,44,864,60 C912,76,960,80,1008,68 C1056,56,1104,28,1152,24 C1200,20,1248,40,1296,52 C1344,64,1392,68,1416,70 L1440,72 L1440,120 L1416,120 C1392,120,1344,120,1296,120 C1248,120,1200,120,1152,120 C1104,120,1056,120,1008,120 C960,120,912,120,864,120 C816,120,768,120,720,120 C672,120,624,120,576,120 C528,120,480,120,432,120 C384,120,336,120,288,120 C240,120,192,120,144,120 C96,120,48,120,24,120 L0,120 Z" class="svg-torn-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 2: ABOUT ME ================= -->
+  <section id="about" class="min-h-screen py-20 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-cream flex flex-col justify-center">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex items-center gap-4 mb-16 relative">
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800 z-10">
+          About <span class="font-outfit uppercase font-black text-rose-500 not-italic text-4xl md:text-6xl tracking-tight">Me</span>
+        </h2>
+        <!-- Simple doodle circle around title -->
+        <svg class="absolute -left-6 -top-6 w-48 h-24 text-rose-200 stroke-current fill-none pointer-events-none stroke-2 animate-pulse" viewBox="0 0 100 50">
+          <ellipse cx="50" cy="25" rx="45" ry="20" />
+        </svg>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Side: Journal Content -->
+        <div class="lg:col-span-7 bg-[#fbfbf9] p-8 md:p-12 shadow-lg border border-gray-200 rounded-xl relative transform -rotate-1">
+          <!-- Notebook spirals on the side -->
+          <div class="absolute left-[-10px] top-0 bottom-0 w-6 flex flex-col justify-around py-6 pointer-events-none">
+            <div class="w-5 h-3 bg-gray-400 rounded-full border border-gray-500 shadow-sm"></div>
+            <div class="w-5 h-3 bg-gray-400 rounded-full border border-gray-500 shadow-sm"></div>
+            <div class="w-5 h-3 bg-gray-400 rounded-full border border-gray-500 shadow-sm"></div>
+            <div class="w-5 h-3 bg-gray-400 rounded-full border border-gray-500 shadow-sm"></div>
+            <div class="w-5 h-3 bg-gray-400 rounded-full border border-gray-500 shadow-sm"></div>
+          </div>
+          
+          <div class="pl-4">
+            <h3 class="font-outfit text-xl font-bold uppercase text-slate-700 mb-6 tracking-wide flex items-center gap-2">
+              <span class="text-rose-500">◆</span> WHO I AM
+            </h3>
+            
+            <p class="text-slate-700 font-sans leading-relaxed text-base mb-6">
+              I am a <strong class="text-slate-800">B.Tech Artificial Intelligence student</strong> at <span class="underline decoration-yellow-400 decoration-wavy font-semibold">Saranathan College of Engineering</span> who enjoys designing user-friendly interfaces, solving problems through Python, and continuously exploring new technologies.
+            </p>
+            
+            <p class="text-slate-700 font-sans leading-relaxed text-base mb-6">
+              I believe good design and technology together can create meaningful digital experiences. I am always eager to learn, collaborate, and turn ideas into reality.
+            </p>
+
+            <!-- Handwritten signature -->
+            <div class="mt-8 text-right">
+              <p class="font-hand text-3xl text-rose-500 font-bold rotate-[-3deg]">Raghul Nandhakumar</p>
+              <p class="text-xs text-gray-400 tracking-wider">CREATIVE MIND</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Scattered Sticky Notes & Doodles -->
+        <div class="lg:col-span-5 flex flex-col gap-8 relative mt-8 lg:mt-0">
+          
+          <!-- Sticky Note 1: Education Callout -->
+          <div class="sticky-note sticky-note-yellow p-6 transform rotate-3 relative max-w-sm ml-auto">
+            <div class="push-pin"></div>
+            <p class="font-hand text-xs text-gray-500 font-bold mb-2">MY PHILOSOPHY</p>
+            <p class="font-serif italic text-slate-800 text-base leading-relaxed">
+              "Design is not just what it looks like and feels like. Design is how it works."
+            </p>
+            <p class="text-right text-xs font-hand text-slate-500 mt-2">— Creative Journal</p>
+          </div>
+
+          <!-- Sticky Note 2: Quick facts -->
+          <div class="sticky-note sticky-note-blue p-6 transform -rotate-3 relative max-w-sm mr-auto">
+            <div class="washi-tape washi-tape-pink w-20 -top-4 left-6"></div>
+            <h4 class="font-outfit text-sm font-extrabold text-slate-800 mb-2">QUICK FACTS 📝</h4>
+            <ul class="text-slate-700 text-xs font-sans space-y-2">
+              <li class="flex items-center gap-2">
+                <span class="text-blue-500 font-bold">📍</span> saranathan college of engineering
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-blue-500 font-bold">🎓</span> B.Tech AI Student (2025-2029)
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-blue-500 font-bold">💡</span> ui/ux design enthusiast
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-blue-500 font-bold">🐍</span> python problem solver
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Doodled arrow pointing back to content -->
+          <div class="absolute -left-12 bottom-0 w-24 h-24 hidden lg:block opacity-45">
+            <svg class="w-full h-full text-slate-400" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10,80 Q50,90 80,40 M80,40 L65,38 M80,40 L78,58" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,80 C120,40 240,20 360,40 C480,60 600,100 720,80 C840,60 960,10 1080,20 C1200,30 1320,80 1440,50 L1440,120 L0,120 Z" class="svg-torn-ruled-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 3: EDUCATION ================= -->
+  <section id="education" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-ruled">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex items-center gap-4 mb-20">
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800">
+          Education
+        </h2>
+        <div class="w-12 h-12 rounded-full bg-rose-100 border border-rose-300 flex items-center justify-center transform rotate-12 shadow-sm">
+          <span class="text-lg">🎓</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side: Notebook Timeline -->
+        <div class="lg:col-span-8 relative pl-10 md:pl-16">
+          
+          <!-- Timeline Vertical Rule (drawn style) -->
+          <div class="absolute left-[20px] md:left-[32px] top-0 bottom-0 w-[4px] bg-dashed border-l-2 border-slate-300"></div>
+          
+          <!-- Education timeline node -->
+          <div class="relative mb-12">
+            <!-- Timeline Handdrawn Circle marker -->
+            <div class="absolute left-[-42px] md:left-[-54px] top-1.5 w-8 h-8 rounded-full bg-white border-4 border-rose-400 flex items-center justify-center shadow-md">
+              <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
+            </div>
+            
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-200 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+              <span class="font-hand text-lg text-rose-500 font-bold bg-rose-50 px-3 py-1 rounded-full border border-rose-100">
+                2025 – 2029
+              </span>
+              
+              <h3 class="font-outfit text-2xl font-extrabold text-slate-800 mt-4">
+                Saranathan College of Engineering
+              </h3>
+              
+              <p class="font-serif italic text-slate-500 text-lg font-semibold mt-1">
+                Bachelor of Technology
+              </p>
+              
+              <p class="text-slate-600 font-sans mt-3 text-sm md:text-base">
+                Specializing in <strong class="text-slate-700">Artificial Intelligence &amp; Data Science</strong>. Building a robust core in machine learning models, statistical analysis, deep neural networks, and Python algorithm design.
+              </p>
+              
+              <div class="flex items-center gap-3 mt-6 border-t border-dashed border-gray-100 pt-4 text-xs font-mono text-gray-400">
+                <span>📍 Trichy, Tamil Nadu</span>
+                <span>•</span>
+                <span>🎓 Current Pursuit</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Right Side: Decorative Illustrations & Notes -->
+        <div class="lg:col-span-4 flex flex-col items-center justify-center">
+          
+          <div class="relative p-6 bg-yellow-50 border border-yellow-200 rounded-lg shadow-md max-w-xs transform rotate-6 animate-float-slow text-slate-700">
+            <div class="absolute -top-3 left-1/3 washi-tape washi-tape-yellow w-24"></div>
+            <h4 class="font-hand text-xl font-bold mb-2">Graduation Notes 📝</h4>
+            <p class="text-xs leading-relaxed font-hand text-gray-600">
+              Exploring cutting-edge research in neural networks, building design models in Figma, and bridging the gap between artistic layouts and technical development.
+            </p>
+            
+            <!-- Book doodle -->
+            <div class="mt-4 flex justify-end">
+              <svg class="w-12 h-12 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,30 L30,40 C60,50 120,70 180,65 C240,60 300,30 360,25 C420,20 480,40 540,55 C600,70 660,80 720,70 C780,60 840,30 900,25 C960,20 1020,40 1080,50 C1140,60 1200,60 1260,50 C1320,40 1380,20 1410,10 L1440,0 L1440,120 L1410,120 C1380,120,1320,120,1260,120 C1200,120,1140,120,1080,120 C1020,120,960,120,900,120 C840,120,780,120,720,120 C660,120,600,120,540,120 C480,120,420,120,360,120 C300,120,240,120,180,120 C120,120,60,120,30,120 L0,120 Z" class="svg-torn-grid-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4: SKILLS ================= -->
+  <section id="skills" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-grid flex flex-col justify-center">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex flex-col items-center mb-16 text-center">
+        <span class="font-hand text-rose-500 text-3xl font-extrabold">My Creative Toolkit</span>
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800 mt-2">
+          Skills &amp; Technologies
+        </h2>
+        <div class="washi-tape washi-tape-blue w-32 mt-4 transform rotate-1"></div>
+      </div>
+
+      <!-- Skills Cards Layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Skill 1: UI/UX (Figma, Adobe XD) -->
+        <div class="bg-white p-6 shadow-md border border-slate-200 rounded-xl relative transform -rotate-2 hover:rotate-1 hover:-translate-y-2 transition-all duration-300">
+          <div class="push-pin"></div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 border-b border-dashed border-gray-200 pb-3 mb-4 flex items-center justify-between">
+            <span>UI / UX DESIGN</span>
+            <span class="text-rose-500">🎨</span>
+          </h3>
+          <div class="space-y-4">
+            <!-- Figma -->
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex items-center justify-center bg-orange-50 rounded-lg">
+                <!-- Figma SVG Logo -->
+                <svg class="w-5 h-5" viewBox="0 0 38 57" fill="none">
+                  <path d="M19 0C8.5 0 0 8.5 0 19C0 25.4 3.2 31.1 8.2 34.5C6.1 36.9 4.8 40.1 4.8 43.6C4.8 51 10.8 57 18.2 57C24.6 57 30 52.4 31.2 46.2C35.2 43.4 38 38.8 38 33.6C38 27.2 32.8 22 26.4 22C24.4 22 22.5 22.5 20.8 23.4C22.2 19 21.8 14.1 19.5 10C22.6 10 25.2 7.4 25.2 4.3C25.2 1.9 23.3 0 20.9 0H19Z" fill="#F24E1E"/>
+                  <path d="M9.5 28.5C9.5 23.2 13.7 19 19 19C24.3 19 28.5 23.2 28.5 28.5C28.5 33.8 24.3 38 19 38C13.7 38 9.5 33.8 9.5 28.5Z" fill="#A259FF"/>
+                  <path d="M0 19C0 13.7 4.2 9.5 9.5 9.5H19V28.5H9.5C4.2 28.5 0 24.3 0 19Z" fill="#F24E1E"/>
+                  <path d="M19 28.5H28.5C33.8 28.5 38 32.7 38 38C38 43.3 33.8 47.5 28.5 47.5H19V28.5Z" fill="#0ACF83"/>
+                  <path d="M9.5 47.5C4.2 47.5 0 43.3 0 38C0 35.8 0.7 33.8 1.9 32.1L9.5 47.5Z" fill="#1ABCFE"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-outfit text-sm font-semibold text-slate-800">Figma</h4>
+                <p class="text-[11px] text-slate-400 font-medium">Wireframes, High-Fidelity UI, Prototypes</p>
+              </div>
+            </div>
+            <!-- Adobe XD -->
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex items-center justify-center bg-fuchsia-50 rounded-lg">
+                <!-- Adobe XD SVG -->
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="#FF2277" class="hidden"/>
+                  <rect x="2" y="2" width="20" height="20" rx="4" fill="#470137"/>
+                  <text x="5" y="15" fill="#FF61F6" font-size="10" font-family="Arial, Helvetica" font-weight="bold">Xd</text>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-outfit text-sm font-semibold text-slate-800">Adobe XD</h4>
+                <p class="text-[11px] text-slate-400 font-medium">Vector Mockups, Interactions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 2: Programming (Python) -->
+        <div class="bg-white p-6 shadow-md border border-slate-200 rounded-xl relative transform rotate-1 hover:rotate-[-2deg] hover:-translate-y-2 transition-all duration-300">
+          <div class="washi-tape washi-tape-pink w-16 -top-4 right-4"></div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 border-b border-dashed border-gray-200 pb-3 mb-4 flex items-center justify-between">
+            <span>PROGRAMMING</span>
+            <span class="text-blue-500">🐍</span>
+          </h3>
+          <div class="space-y-4">
+            <!-- Python -->
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-lg">
+                <!-- Python SVG Logo -->
+                <svg class="w-5 h-5" viewBox="0 0 448 512" fill="#387eb8">
+                  <path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-67.8 67.8H172.7c-29.1 0-54.2 23.9-54.2 54.2v94.8c0 29.1 23.9 54.2 54.2 54.2h35.1v-47.4c0-36.8 30.2-67.8 67.8-67.8h105.8c29.1 0 54.2-23.9 54.2-54.2v-94.8c0-.2 0-.2-.1-.2zm-226.3 226c-10.5 0-19-8.5-19-19s8.5-19 19-19 19 8.5 19 19-8.5 19-19 19zM8.2 311.5c7.7 30.9 22.3 54.2 53.4 54.2h40.1v-47.4c0-36.8 31.2-67.8 67.8-67.8h105.8c29.1 0 54.2-23.9 54.2-54.2v-94.8c0-29.1-23.9-54.2-54.2-54.2h-35.1v47.4c0 36.8-30.2 67.8-67.8 67.8H67.8C38.7 215 13.6 238.9 13.6 269.2v94.8c0 .2 0 .2.1.2zm226.3-226c10.5 0 19 8.5 19 19s-8.5 19-19 19-19-8.5-19-19 8.5-19 19-19z"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-outfit text-sm font-semibold text-slate-800">Python</h4>
+                <p class="text-[11px] text-slate-400 font-medium">Data Structures, Algorithms, Scripts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 3: Creative Tools (Canva) -->
+        <div class="bg-white p-6 shadow-md border border-slate-200 rounded-xl relative transform -rotate-1 hover:rotate-2 hover:-translate-y-2 transition-all duration-300">
+          <div class="paper-clip"></div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 border-b border-dashed border-gray-200 pb-3 mb-4 flex items-center justify-between">
+            <span>CREATIVE TOOLS</span>
+            <span class="text-green-500">✨</span>
+          </h3>
+          <div class="space-y-4">
+            <!-- Canva -->
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex items-center justify-center bg-sky-50 rounded-lg">
+                <!-- Canva SVG Logo -->
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                  <rect width="24" height="24" rx="5" fill="#00C4CC"/>
+                  <text x="4" y="16" fill="white" font-size="10" font-family="Arial, Helvetica" font-weight="bold">Canva</text>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-outfit text-sm font-semibold text-slate-800">Canva</h4>
+                <p class="text-[11px] text-slate-400 font-medium">Graphic Layouts, Branding, Assets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill 4: AI platforms (Gamma AI) -->
+        <div class="bg-white p-6 shadow-md border border-slate-200 rounded-xl relative transform rotate-2 hover:rotate-[-1deg] hover:-translate-y-2 transition-all duration-300">
+          <div class="push-pin"></div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 border-b border-dashed border-gray-200 pb-3 mb-4 flex items-center justify-between">
+            <span>AI PLATFORMS</span>
+            <span class="text-purple-500">🧠</span>
+          </h3>
+          <div class="space-y-4">
+            <!-- Gamma AI -->
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 flex items-center justify-center bg-purple-50 rounded-lg">
+                <span class="text-lg font-extrabold text-purple-600 font-outfit">Γ</span>
+              </div>
+              <div>
+                <h4 class="font-outfit text-sm font-semibold text-slate-800">Gamma AI</h4>
+                <p class="text-[11px] text-slate-400 font-medium">AI Presentation Design, Web Mockups</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,40 L48,32 C96,24,192,8,288,24 C384,40,480,88,576,96 C672,104,768,72,864,56 C960,40,1056,40,1152,48 C1248,56,1344,72,1392,80 L1440,88 L1440,120 L1392,120 C1344,120,1248,120,1152,120 C1056,120,960,120,864,120 C768,120,672,120,576,120 C480,120,384,120,288,120 C192,120,96,120,48,120 L0,120 Z" class="svg-torn-craft-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 5: EXPERIENCE ================= -->
+  <section id="experience" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-craft">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex items-center gap-4 mb-20">
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800">
+          Experience
+        </h2>
+        <div class="bg-white border border-gray-300 px-3 py-1 font-hand text-lg rounded-md shadow-sm transform -rotate-12">
+          💼 Professional Chapter
+        </div>
+      </div>
+
+      <!-- Experience Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Experience Content card -->
+        <div class="lg:col-span-8 bg-white p-8 md:p-12 shadow-lg border border-slate-200 rounded-xl relative transform rotate-1">
+          <!-- Pushpin detail -->
+          <div class="push-pin"></div>
+          
+          <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+            <span class="font-hand text-lg text-emerald-600 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100 flex items-center gap-1.5 shadow-sm">
+              <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+              June 2026 – July 2026
+            </span>
+            
+            <span class="inline-flex items-center gap-1 text-xs font-mono font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded border border-blue-200">
+              ✓ Verified Internship
+            </span>
+          </div>
+
+          <h3 class="font-outfit text-3xl font-extrabold text-slate-800">
+            UI/UX &amp; Graphic Design Intern
+          </h3>
+          
+          <p class="font-serif italic text-slate-500 text-lg font-semibold mt-1">
+            InternsForge Skill India Pvt. Ltd.
+          </p>
+
+          <p class="text-slate-600 leading-relaxed font-sans mt-4 text-sm md:text-base">
+            Crafted responsive digital layouts, created branding assets, and optimized user workflows. Translated complex user scenarios into interactive Figma and Adobe XD prototypes while collaborating closely with development teams.
+          </p>
+
+          <!-- Core Technologies Used Doodles -->
+          <div class="mt-8 border-t border-dashed border-gray-200 pt-6">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Tool Stack Utilized:</p>
+            <div class="flex flex-wrap gap-4">
+              <span class="flex items-center gap-1.5 px-3 py-1 bg-slate-50 rounded-full border border-gray-200 text-xs font-medium text-slate-700">
+                🖌️ Figma
+              </span>
+              <span class="flex items-center gap-1.5 px-3 py-1 bg-slate-50 rounded-full border border-gray-200 text-xs font-medium text-slate-700">
+                ⚡ Adobe XD
+              </span>
+              <span class="flex items-center gap-1.5 px-3 py-1 bg-slate-50 rounded-full border border-gray-200 text-xs font-medium text-slate-700">
+                🎨 Canva
+              </span>
+            </div>
+          </div>
+
+          <!-- CTA to View Offer Letter Modal -->
+          <div class="mt-8">
+            <button onclick="toggleModal(true)" class="inline-flex items-center bg-[#1e293b] text-white hover:bg-slate-800 px-5 py-2.5 rounded text-sm font-semibold shadow transition-all duration-300 hover:scale-105 active:scale-95">
+              <span>View Offer Letter</span>
+              <span class="ml-2">👁️</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Side: Decorative Scrapbook Elements -->
+        <div class="lg:col-span-4 flex flex-col justify-center gap-6 relative">
+          <!-- Washi tape decoration -->
+          <div class="washi-tape washi-tape-pink w-36 -top-4 right-4 transform rotate-12"></div>
+          
+          <div class="p-6 bg-blue-50 border border-blue-200 rounded-lg shadow-md transform -rotate-3 text-slate-700">
+            <h4 class="font-hand text-xl font-bold mb-2">Reflections ✏️</h4>
+            <p class="text-xs leading-relaxed font-hand text-gray-600">
+              "Working with real constraints at InternsForge taught me that design is a language of empathy. A interface is only as good as the ease it provides to the user."
+            </p>
+          </div>
+
+          <!-- Handdrawn circular loop drawing -->
+          <div class="flex justify-center opacity-30 mt-4">
+            <svg class="w-24 h-24 text-slate-500" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M50,10 A40,40 0 1,1 49,10 Z M50,20 A30,30 0 1,0 51,20 Z" stroke-dasharray="5,5"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,60 C180,100 360,100 540,60 C720,20 900,20 1080,60 C1260,100 1380,80 1440,60 L1440,120 L0,120 Z" class="svg-torn-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 6: ACHIEVEMENTS ================= -->
+  <section id="achievements" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-cream">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex flex-col items-center mb-16 text-center">
+        <span class="font-hand text-rose-500 text-3xl font-extrabold">Proud Moments</span>
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800 mt-2">
+          Achievements
+        </h2>
+        <div class="washi-tape washi-tape-yellow w-36 mt-4"></div>
+      </div>
+
+      <!-- Achievement Corkboard Pin layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Achievement 1: Ideathon Winner -->
+        <div class="sticky-note sticky-note-yellow p-6 relative transform -rotate-2">
+          <div class="push-pin"></div>
+          <div class="text-3xl mb-4">🏆</div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 mb-2">Ideathon Winner</h3>
+          <p class="font-sans text-xs leading-relaxed text-slate-600">
+            Won college-level ideathons by presenting innovative, AI-driven solutions to real-world social and logistical challenges.
+          </p>
+        </div>
+
+        <!-- Achievement 2: Project Presentation -->
+        <div class="sticky-note sticky-note-blue p-6 relative transform rotate-3">
+          <div class="push-pin" style="background-color: #3b82f6;"></div>
+          <div class="text-3xl mb-4">🎤</div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 mb-2">Project Presentation</h3>
+          <p class="font-sans text-xs leading-relaxed text-slate-600">
+            Recognized for impactful technical presentations, breaking down complex data models into understandable visual narratives.
+          </p>
+        </div>
+
+        <!-- Achievement 3: Table Tennis -->
+        <div class="sticky-note sticky-note-pink p-6 relative transform rotate-1">
+          <div class="push-pin" style="background-color: #ec4899;"></div>
+          <div class="text-3xl mb-4 flex items-center gap-2">
+            🏓 
+            <span class="racket-container text-base">🏸</span>
+          </div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 mb-2">District Table Tennis</h3>
+          <p class="font-sans text-xs leading-relaxed text-slate-600">
+            Represented school and college levels at district competitions. Developing fast reflexes and sharp mental concentration.
+          </p>
+        </div>
+
+        <!-- Achievement 4: NLC Quiz -->
+        <div class="sticky-note sticky-note-green p-6 relative transform -rotate-3 md:col-start-1 lg:col-start-auto">
+          <div class="push-pin" style="background-color: #10b981;"></div>
+          <div class="text-3xl mb-4">🧠</div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 mb-2">NLC Quiz Runner-up</h3>
+          <p class="font-sans text-xs leading-relaxed text-slate-600">
+            Recognized for analytical thinking, prompt calculations, and quick general knowledge recall under competitive pressure.
+          </p>
+        </div>
+
+        <!-- Achievement 5: NSS Volunteer -->
+        <div class="bg-white p-6 shadow-md border border-slate-200 rounded-xl relative transform rotate-2">
+          <!-- Washi tape at top -->
+          <div class="washi-tape washi-tape-blue w-20 -top-3 left-4"></div>
+          <div class="text-3xl mb-4">🤝</div>
+          <h3 class="font-outfit text-lg font-bold text-slate-800 mb-2">NSS Volunteer</h3>
+          <p class="font-sans text-xs leading-relaxed text-slate-600">
+            Actively participated in community development services, blood donation drives, and environmental cleaning campaigns.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,30 L24,40 C48,50,96,70,144,70 C192,70,240,50,288,40 C336,30,384,30,432,35 C480,40,528,50,576,55 C624,60,672,60,720,55 C768,50,816,40,864,40 C912,40,960,50,1008,55 C1056,60,1104,60,1152,55 C1200,50,1248,40,1296,40 C1344,40,1392,50,1416,55 L1440,60 L1440,120 L1416,120 C1392,120,1344,120,1296,120 C1248,120,1200,120,1152,120 C1104,120,1056,120,1008,120 C960,120,912,120,864,120 C816,120,768,120,720,120 C672,120,624,120,576,120 C528,120,480,120,432,120 C384,120,336,120,288,120 C240,120,192,120,144,120 C96,120,48,120,24,120 L0,120 Z" class="svg-torn-dots-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 7: PROJECTS ================= -->
+  <section id="projects" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-dots">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex items-center justify-between mb-16 flex-wrap gap-4">
+        <div>
+          <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800">
+            Projects
+          </h2>
+          <p class="font-hand text-xl text-rose-500 font-bold mt-1">My Pinterest board of creation</p>
+        </div>
+        <div class="hidden md:block washi-tape washi-tape-pink w-28 transform -rotate-3"></div>
+      </div>
+
+      <!-- Pinterest Grid (Masonry columns via Tailwind grid with varying height cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+        
+        <!-- Project 1: Foodie.com (Large Card) -->
+        <div class="bg-white p-5 shadow-lg border border-slate-200 rounded-xl relative transform -rotate-1 hover:rotate-1 hover:scale-[1.02] hover:-translate-y-2 transition-all duration-300">
+          <div class="push-pin"></div>
+          <!-- Image placeholder / mockup container -->
+          <div class="w-full h-48 bg-rose-50 border border-rose-100 rounded-lg overflow-hidden relative mb-4 flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center filter grayscale-[20%] opacity-80" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=400');"></div>
+            <!-- Washi tape on placeholder -->
+            <div class="washi-tape washi-tape-yellow w-24 top-2 left-2"></div>
+            <div class="relative z-10 bg-white/95 px-4 py-2 rounded shadow-md border border-yellow-200 text-center">
+              <span class="font-outfit text-xs font-bold text-rose-500 tracking-wider">PREVIEW</span>
+              <h4 class="font-serif italic text-slate-800 text-sm font-semibold">Foodie.com App</h4>
+            </div>
+          </div>
+          
+          <h3 class="font-outfit text-xl font-extrabold text-slate-800">Foodie.com</h3>
+          <p class="text-slate-500 font-sans text-xs mt-2 leading-relaxed">
+            A visual food discovery and ordering application focusing on frictionless micro-interactions, beautiful layout structures, and smart cart suggestions.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">Figma</span>
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">Adobe XD</span>
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">Canva</span>
+          </div>
+
+          <div class="mt-6 flex gap-3 border-t border-dashed border-gray-100 pt-4">
+            <a href="https://github.com/thesoundisloud007-cloud" target="_blank" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white rounded text-xs font-bold transition-colors">
+              GitHub
+            </a>
+            <a href="#" onclick="alert('Foodie.com UI prototype loaded as a mock presentation.'); return false;" class="flex-1 text-center py-2 border border-slate-700 hover:bg-slate-50 text-slate-800 rounded text-xs font-bold transition-colors">
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: AI Study Planner (Medium Card) -->
+        <div class="bg-white p-5 shadow-lg border border-slate-200 rounded-xl relative transform rotate-2 hover:rotate-[-1deg] hover:scale-[1.02] hover:-translate-y-2 transition-all duration-300">
+          <div class="paper-clip"></div>
+          <!-- Image placeholder -->
+          <div class="w-full h-40 bg-blue-50 border border-blue-100 rounded-lg overflow-hidden relative mb-4 flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-85" style="background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=400');"></div>
+            <div class="relative z-10 bg-white/95 px-4 py-2 rounded shadow-md border border-blue-200 text-center">
+              <span class="font-outfit text-xs font-bold text-blue-500 tracking-wider">AI AGENT</span>
+              <h4 class="font-serif italic text-slate-800 text-sm font-semibold">AI Planner</h4>
+            </div>
+          </div>
+          
+          <h3 class="font-outfit text-xl font-extrabold text-slate-800">AI Study Planner</h3>
+          <p class="text-slate-500 font-sans text-xs mt-2 leading-relaxed">
+            Generates custom quiz papers and study roadmaps from textual lecture transcripts using Python models and Gamma presentation layers.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">Python</span>
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">Gamma AI</span>
+          </div>
+
+          <div class="mt-6 flex gap-3 border-t border-dashed border-gray-100 pt-4">
+            <a href="https://github.com/thesoundisloud007-cloud" target="_blank" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white rounded text-xs font-bold transition-colors">
+              GitHub
+            </a>
+            <a href="#" onclick="alert('AI Study Planner live presentation model opened.'); return false;" class="flex-1 text-center py-2 border border-slate-700 hover:bg-slate-50 text-slate-800 rounded text-xs font-bold transition-colors">
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: Doodle Board Canvas (Small Card) -->
+        <div class="bg-white p-5 shadow-lg border border-slate-200 rounded-xl relative transform -rotate-2 hover:rotate-1 hover:scale-[1.02] hover:-translate-y-2 transition-all duration-300">
+          <div class="push-pin" style="background-color: #10b981;"></div>
+          <!-- Image placeholder -->
+          <div class="w-full h-36 bg-emerald-50 border border-emerald-100 rounded-lg overflow-hidden relative mb-4 flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center opacity-80" style="background-image: url('https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=400');"></div>
+            <div class="relative z-10 bg-white/95 px-4 py-2 rounded shadow-md border border-emerald-200 text-center">
+              <span class="font-outfit text-xs font-bold text-emerald-500 tracking-wider">CANVAS</span>
+              <h4 class="font-serif italic text-slate-800 text-sm font-semibold">Doodleboard</h4>
+            </div>
+          </div>
+          
+          <h3 class="font-outfit text-xl font-extrabold text-slate-800">Doodle Board</h3>
+          <p class="text-slate-500 font-sans text-xs mt-2 leading-relaxed">
+            An interactive pixel canvas board built to let UI designers test layout drafts and draw SVG elements inside a web browser.
+          </p>
+
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">HTML Canvas</span>
+            <span class="px-2.5 py-0.5 bg-slate-50 border border-slate-200 text-[10px] font-semibold text-slate-600 rounded">JS Logic</span>
+          </div>
+
+          <div class="mt-6 flex gap-3 border-t border-dashed border-gray-100 pt-4">
+            <a href="https://github.com/thesoundisloud007-cloud" target="_blank" class="flex-1 text-center py-2 bg-slate-800 hover:bg-slate-700 text-white rounded text-xs font-bold transition-colors">
+              GitHub
+            </a>
+            <a href="#" onclick="alert('Doodle Board tool loaded successfully.'); return false;" class="flex-1 text-center py-2 border border-slate-700 hover:bg-slate-50 text-slate-800 rounded text-xs font-bold transition-colors">
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Torn paper divider bottom -->
+    <div class="absolute bottom-0 left-0 right-0 z-20 pointer-events-none transform translate-y-1">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-12 md:h-20" preserveAspectRatio="none">
+        <path d="M0,80 L48,72 C96,64,192,48,288,52 C384,56,480,80,576,88 C672,96,768,88,864,80 C960,72,1056,64,1152,68 C1248,72,1344,88,1392,96 L1440,104 L1440,120 L1392,120 C1344,120,1248,120,1152,120 C1056,120,960,120,864,120 C768,120,672,120,576,120 C528,120,480,120,432,120 C384,120,336,120,288,120 C240,120,192,120,144,120 C96,120,48,120,24,120 L0,120 Z" class="svg-torn-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 8: CONTACT ================= -->
+  <section id="contact" class="min-h-screen py-24 px-6 md:px-16 lg:px-24 relative overflow-hidden paper-cream flex flex-col justify-center">
+    
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      
+      <!-- Section Title -->
+      <div class="flex flex-col items-center mb-16 text-center">
+        <span class="font-hand text-rose-500 text-3xl font-extrabold">Let's write a new page</span>
+        <h2 class="font-serif italic text-5xl md:text-7xl font-extrabold text-slate-800 mt-2 uppercase">
+          Let's Connect
+        </h2>
+        <div class="washi-tape washi-tape-pink w-36 mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Side: Contact Cards Scrapbook links -->
+        <div class="lg:col-span-5 space-y-6">
+          <h3 class="font-outfit text-xl font-bold uppercase text-slate-700 mb-6 tracking-wider">
+            📬 REACH OUT DIRECTLY
+          </h3>
+
+          <!-- Email -->
+          <a href="mailto:raghulnandhakumar@gmail.com" class="block bg-white p-4 shadow-sm border border-slate-200 rounded-lg transform -rotate-1 hover:rotate-1 hover:scale-105 transition-all duration-300">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📧</span>
+              <div>
+                <h4 class="font-outfit text-xs font-semibold text-slate-400">EMAIL</h4>
+                <p class="font-serif italic text-sm md:text-base text-slate-800 font-semibold break-all">raghulnandhakumar@gmail.com</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Phone -->
+          <a href="tel:+919566811721" class="block bg-white p-4 shadow-sm border border-slate-200 rounded-lg transform rotate-2 hover:rotate-[-1deg] hover:scale-105 transition-all duration-300">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📱</span>
+              <div>
+                <h4 class="font-outfit text-xs font-semibold text-slate-400">PHONE</h4>
+                <p class="font-serif italic text-sm md:text-base text-slate-800 font-semibold">+91 95668 11721</p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Social media flex grid -->
+          <div class="grid grid-cols-3 gap-3">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/raghul-nandhakumar-33592534a/" target="_blank" class="bg-blue-50 border border-blue-200 p-3 text-center rounded shadow-sm hover:scale-105 hover:bg-blue-100 transition-all duration-300 flex flex-col items-center justify-center gap-1">
+              <span class="text-lg">💼</span>
+              <span class="text-[10px] font-bold text-blue-700">LinkedIn</span>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/thesoundisloud007-cloud" target="_blank" class="bg-slate-100 border border-slate-200 p-3 text-center rounded shadow-sm hover:scale-105 hover:bg-slate-200 transition-all duration-300 flex flex-col items-center justify-center gap-1">
+              <span class="text-lg">💻</span>
+              <span class="text-[10px] font-bold text-slate-700">GitHub</span>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/just_me_raghul/" target="_blank" class="bg-pink-50 border border-pink-200 p-3 text-center rounded shadow-sm hover:scale-105 hover:bg-pink-100 transition-all duration-300 flex flex-col items-center justify-center gap-1">
+              <span class="text-lg">📷</span>
+              <span class="text-[10px] font-bold text-pink-700">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side: Scrapbook Letter-Style Contact Form -->
+        <div class="lg:col-span-7">
+          <div class="envelope envelope-linings p-6 md:p-10 transform rotate-1">
+            <h3 class="font-hand text-3xl font-bold text-rose-500 mb-6 text-center border-b border-dashed border-rose-200 pb-3">
+              Write Me a Letter ✍️
+            </h3>
+            
+            <form id="scrapbook-contact-form" class="space-y-6 font-hand text-lg md:text-xl text-slate-700 leading-relaxed">
+              <div>
+                Dear Raghul,
+              </div>
+              <div>
+                My name is 
+                <input type="text" id="form-name" required placeholder="[your name]" class="bg-yellow-50 border-b border-dashed border-gray-400 focus:border-rose-400 focus:bg-yellow-100 px-2 py-0.5 outline-none font-sans text-sm font-semibold text-slate-800 placeholder-gray-400 transition-all">
+                and I am writing to you from 
+                <input type="text" id="form-source" placeholder="[your company/location]" class="bg-yellow-50 border-b border-dashed border-gray-400 focus:border-rose-400 focus:bg-yellow-100 px-2 py-0.5 outline-none font-sans text-sm font-semibold text-slate-800 placeholder-gray-400 transition-all">.
+              </div>
+              <div>
+                I would love to collaborate or talk with you about 
+                <input type="text" id="form-subject" required placeholder="[design, python project, general talk]" class="bg-yellow-50 border-b border-dashed border-gray-400 focus:border-rose-400 focus:bg-yellow-100 px-2 py-0.5 outline-none font-sans text-sm font-semibold text-slate-800 placeholder-gray-400 transition-all">.
+              </div>
+              <div class="flex flex-col gap-2 mt-2">
+                <span>Here is a quick message:</span>
+                <textarea id="form-message" rows="3" required placeholder="[type your message here...]" class="w-full bg-yellow-50 border border-dashed border-gray-400 focus:border-rose-400 focus:bg-yellow-100 p-3 outline-none rounded font-sans text-sm font-semibold text-slate-800 placeholder-gray-400 transition-all"></textarea>
+              </div>
+              <div>
+                Please reply back to me at 
+                <input type="email" id="form-email" required placeholder="[your email address]" class="bg-yellow-50 border-b border-dashed border-gray-400 focus:border-rose-400 focus:bg-yellow-100 px-2 py-0.5 outline-none font-sans text-sm font-semibold text-slate-800 placeholder-gray-400 transition-all">.
+              </div>
+              <div class="pt-6 border-t border-dashed border-rose-200 flex justify-between items-center">
+                <span class="text-sm font-hand text-slate-400 font-bold">Best regards,</span>
+                <button type="submit" class="bg-rose-500 hover:bg-rose-600 text-white font-outfit text-sm uppercase tracking-wider font-extrabold px-6 py-2.5 rounded shadow-md transform hover:scale-105 active:scale-95 transition-all">
+                  Send Letter ✉️
+                </button>
+              </div>
+            </form>
+            
+            <!-- Success Toast message styled as a sticky note -->
+            <div id="form-success-note" class="hidden absolute inset-0 bg-yellow-100/95 backdrop-blur-xs flex flex-col items-center justify-center p-8 text-center rounded-lg z-30 transition-all">
+              <div class="push-pin"></div>
+              <span class="text-4xl mb-3">📬</span>
+              <h4 class="font-hand text-3xl font-bold text-slate-800 mb-2">Letter Received!</h4>
+              <p class="font-serif italic text-sm text-slate-600 max-w-sm mb-6">
+                "Thank you for writing. I'll read your note on my next study break and get back to you soon!"
+              </p>
+              <button onclick="dismissSuccessNote()" class="px-4 py-1.5 bg-slate-800 text-white rounded text-xs font-bold hover:bg-slate-700">
+                Write another letter
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-[#1e293b] text-white py-12 px-6 text-center relative overflow-hidden">
+    <!-- Top torn craft-paper line -->
+    <div class="absolute top-0 left-0 right-0 z-20 pointer-events-none transform -translate-y-1 rotate-180">
+      <svg viewBox="0 0 1440 120" fill="none" class="w-full h-8" preserveAspectRatio="none">
+        <path d="M0,60 C180,100 360,100 540,60 C720,20 900,20 1080,60 C1260,100 1380,80 1440,60 L1440,120 L0,120 Z" class="svg-torn-fill"/>
+      </svg>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-4 pt-4">
+      <p class="font-serif italic text-rose-300 text-lg">Thank you for visiting.</p>
+      
+      <!-- Logo in footer -->
+      <div class="w-10 h-10 bg-white text-[#1e293b] font-hand text-xl font-bold flex items-center justify-center rounded shadow-md mx-auto transform -rotate-12">
+        RN
+      </div>
+
+      <p class="font-sans text-xs tracking-wider text-slate-400">
+        Made with ❤️ by Raghul Nandhakumar.
+      </p>
+      
+      <p class="text-[10px] text-slate-500 font-mono">
+        © 2026 Raghul Nandhakumar. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= OFFER LETTER MODAL ================= -->
+  <div id="offer-letter-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 invisible transition-all duration-300">
+    <div class="relative bg-white max-w-2xl w-full p-8 md:p-10 rounded-lg shadow-2xl max-h-[90vh] overflow-y-auto transform scale-95 transition-all duration-300 offer-letter-content">
+      
+      <!-- Close button tape note style -->
+      <button onclick="toggleModal(false)" class="absolute top-4 right-4 bg-rose-100 hover:bg-rose-200 border border-rose-300 text-rose-700 px-3 py-1 font-hand text-sm rounded shadow-sm transform rotate-3">
+        [Close ✕]
+      </button>
+
+      <!-- Mock Corporate Letterhead -->
+      <div class="border-b-2 border-slate-800 pb-4 mb-6">
+        <div class="flex justify-between items-center flex-wrap gap-2">
+          <div>
+            <h1 class="text-xl font-bold text-slate-800 tracking-wider">INTERNSFORGE SKILL INDIA PVT. LTD.</h1>
+            <p class="text-xs text-slate-500 font-sans tracking-wide">Building Tech Skills for Tomorrow</p>
+          </div>
+          <div class="text-right">
+            <span class="text-[10px] font-mono text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Ref: IF/2026/UXD-9812</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Letter Content -->
+      <div class="space-y-4 text-xs md:text-sm text-slate-700 font-serif leading-relaxed">
+        <div class="text-right text-slate-600 font-sans text-xs mb-4">
+          Date: June 01, 2026
+        </div>
+        
+        <div>
+          <strong>To Whom It May Concern</strong>
+        </div>
+        
+        <div class="mt-4">
+          Subject: <strong>Letter of Internship Appointment - UI/UX &amp; Graphic Design</strong>
+        </div>
+
+        <p class="mt-4">
+          We are pleased to appoint <strong>Mr. Raghul Nandhakumar</strong>, a student of B.Tech Artificial Intelligence at Saranathan College of Engineering, as a <strong>UI/UX &amp; Graphic Design Intern</strong> at InternsForge Skill India Pvt. Ltd.
+        </p>
+
+        <p>
+          The duration of this internship is from <strong>June 01, 2026 to July 15, 2026</strong>. During this period, the intern will be working on product layout structures, typography optimization, vector mockup generation, and user journey flows.
+        </p>
+
+        <p>
+          We expect the intern to show professionalism, passion, and diligence in completing tasks on time while maintaining strict confidentiality standards regarding our intellectual property.
+        </p>
+
+        <p>
+          We wish Raghul Nandhakumar all the best for his learning tenure with our design team.
+        </p>
+
+        <!-- Signatures -->
+        <div class="pt-8 flex justify-between items-end flex-wrap gap-4">
+          <div>
+            <div class="font-hand text-xl text-slate-500 rotate-[-1deg]">Priya Sharma</div>
+            <div class="border-t border-slate-400 w-36 pt-1 text-[10px] font-sans text-slate-500">
+              <strong>Priya Sharma</strong><br>
+              Head of Design, InternsForge
+            </div>
+          </div>
+          <div>
+            <!-- Seal simulation -->
+            <div class="w-16 h-16 rounded-full border-2 border-dashed border-red-400 flex items-center justify-center text-red-500 font-sans text-[8px] font-bold tracking-widest text-center uppercase p-1 transform rotate-12">
+              InternsForge Verified
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Custom JS Logic -->
+  <script src="app.js"></script>
+
+</body>
+</html>
